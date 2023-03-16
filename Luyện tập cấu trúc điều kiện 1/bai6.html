@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+// 5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+
+// 10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+
+// 20 % nếu tổng doanh số là lớn hơn 300 triệu.
+        let doanhso = +prompt('Nhập doanh số bán hàng');
+        
+        if (doanhso <= 100) {
+            hoahong=doanhso*0.05;
+            
+        } 
+        else if (doanhso <= 300) {
+            hoahong=doanhso*10/100
+            
+        }
+        else if (doanhso>300) {
+            hoahong=doanhso*20/100
+            
+        }
+        alert('hoahong');
+
+    </script>
+</body>
+</html> 

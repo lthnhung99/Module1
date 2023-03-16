@@ -27,6 +27,7 @@
             <td>
                 <br>
                 <button onclick="kiemtra()">Kiểm tra</button>
+                <p id="result"></p>
             </td>
         </tr>
     </table>
@@ -35,14 +36,17 @@
             let cannang = document.getElementById('cannang').value;
             let chieucao = document.getElementById('chieucao').value;
             let bmi = cannang / (chieucao * chieucao);
-            if (bmi < 18)
-                document.write("Thiếu cân");
-            else if (bmi < 25.0)
-                document.write("Bình thường");
-            else if (bmi < 30.0)
-                document.write("Thừa cân");
-            else
-                document.write("Béo phì")
+            if (bmi < 18.5)
+                document.getElementById("result").innerText= "Chỉ số bmi của bạn là : Thiếu cân";
+            else if (bmi >= 18 && bmi < 25.0)
+            document.getElementById("result").innerText= "Chỉ số bmi của bạn là : Bình thường";
+            else if (bmi >20.5 && bmi <30.0)
+            document.getElementById("result").innerHTML= "Chỉ số bmi của bạn là : Thừa cân";
+            else if(bmi >= 30.0)
+            document.getElementById("result").innerHTML= "Chỉ số bmi của bạn là : Béo phì";
+            else 
+            document.getElementById("result").innerHTML= "Chỉ số bmi của bạn là : Không hợp lệ";
+
         }
     </script>
 </body>
