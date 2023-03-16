@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+</head>
+
+<body>
+    <script>
+        let a = parseInt(prompt('Nhập điểm bài kiểm tra'));
+        let b = parseInt(prompt('Nhập điểm thi giữa kỳ'));
+        let c = parseInt(prompt('Nhập điểm thi cuối kỳ'));
+        let tb = (a + b + c) / 3;
+// Điểm trung bình >= 9 giỏi
+// Điểm trung bình >=7 và < 9 khá
+// Điểm trung bình >=5 và < 7 trung bình
+// Điểm trung bình <5 là yếu
+if (tb>=9) {
+    alert('Giỏi');
+} else if (tb>=7 && tb<9) {
+    alert('Khá');
+} else if (tb>=5 && tb<7) {
+    alert('Trung bình');
+} else if (tb<=5) {
+    alert('Yếu');
+} else {
+    alert('Không hợp lệ')
+}
+
+    </script>
+</body>
+
+</html>

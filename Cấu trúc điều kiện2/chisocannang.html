@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số cân nặng của cơ thể</title>
+</head>
+
+<body>
+    <table>
+        <h1>Tính chỉ số cân nặng</h1>
+        <tr>
+            <td>Nhập cân nặng: (kg)</td>
+            <td>
+                <input id="cannang" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>Nhập chiều cao: (m)</td>
+            <td>
+                <input id="chieucao" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+                <button onclick="kiemtra()">Kiểm tra</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function kiemtra() {
+            let cannang = document.getElementById('cannang').value;
+            let chieucao = document.getElementById('chieucao').value;
+            let bmi = cannang / (chieucao * chieucao);
+            if (bmi < 18)
+                document.write("Thiếu cân");
+            else if (bmi < 25.0)
+                document.write("Bình thường");
+            else if (bmi < 30.0)
+                document.write("Thừa cân");
+            else
+                document.write("Béo phì")
+        }
+    </script>
+</body>
+
+</html>
