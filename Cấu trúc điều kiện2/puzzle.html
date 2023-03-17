@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puzzle</title>
+    <style>
+        table {
+            width: 500px;
+            
+        }
+        table>tbody>tr>td>img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img id="img1" src="image/1.1.jpg" alt="" onclick="change(1)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img2" src="image/2.3.jpg" alt="" onclick="change(2)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img3" src="image/3.2.jpg" alt="" onclick="change(3)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img4" src="image/4.3.jpg" alt="" onclick="change(4)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img5" src="image/5.1.jpg" alt="" onclick="change(5)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function change(row) {
+            let rnd=Math.ceil(Math.random()*3);
+            let imgName=`$(row).$(rnd).jpg`;
+            document.getElementById(`img${row}`).src = `image/${imgName}`;
+            let check=document.getElementById('img1').src +
+                    document.getElementById('img2').src +
+                    document.getElementById('img3').src +
+                    document.getElementById('img4').src +
+                    document.getElementById('img5').src 
+
+        }
+    </script>
+
+</body>
+</html>

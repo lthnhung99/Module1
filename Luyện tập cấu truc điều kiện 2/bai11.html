@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Thu nhập tháng</td>
+                <td>
+                    <input id="thunhap" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Số thuế phải nộp</td>
+                <td>
+                    <input id="thue" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ketqua()">Kết quả</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function ketqua() {
+            let tn=+document.getElementById('thunhap').value;
+            let result;
+            if (tn<=0) {
+                result='Không hợp lệ';
+            }
+            else if (tn<=5000) {
+                result=tn*0.05;
+            }
+            else if (tn<=10000) {
+                result=tn*0.1-0.25000000;
+            }
+            else if (tn<=18000000) {
+                result=tn*0.15-0.75000000;
+            }
+            else if (tn<=32000000) {
+                result=tn*0.2-1.65000000;
+            }
+            else if (tn<=52000000) {
+                result=tn*0.25-3.25000000;
+            }
+            else if (tn<=80000000) {
+                result=tn*0.3-5.85000000;
+            }
+            else  {
+                result=tn*0.35-9.85000000;
+            }
+            document.querySelector('#thue').value=result;
+        }
+    </script>
+</body>
+</html>

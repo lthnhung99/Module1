@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập giá trị a');
+        let b = +prompt('Nhập giá trị b');
+        let c = +prompt('Nhập giá trị c');
+        let delta=b*b*4*a*c;
+        
+        if (delta < 0) {   
+        alert('Phương trình vô nghiệm');
+        } else if (delta == 0) {
+            let x = -b/(2*a);
+            alert(`Phương trình có nghiệm kép= x=${x}`);
+        } else {
+            let x1=(-b+Math.sqrt(delta))/(2*a);
+            let x2=(-b-Math.sqrt(delta))/(2*a);
+            alert(`Phương trình có 2 nghiệm phân biệt= x1=${x1} , x2=${x2}`);
+        }
+    </script>
+</body>
+</html>  

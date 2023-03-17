@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+</head>
+<body>
+    <table>
+        <h1>Tính tiền điện</h1>
+        <tr>
+            <td>Số điện (kWh)</td>
+            <td>
+                <input id="kWh" type="number">
+            </td>
+        </tr>
+        <tr>
+            <td>Giá bán điện (đồng/kWh)</td>
+            <td>
+                <input id="gia" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="tinhtien()">Tính tiền</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function tinhtien() {
+            let kWh=+document.getElementById('kWh').value;
+            let result;
+            if (kWh<0) {
+                result = "Không hợp lệ";
+            }
+            else if (kWh <= 50) {
+                result = kWh * 1678;
+            }
+            else if (kWh <= 100) {
+                result = 50 * 1678 + (kWh - 50) * 1734;
+            }
+            else if (kWh <= 200) {
+                result = 50 * 1678 + 50 * 1734 + (kWh-100)*2014;
+            }
+            else if (kWh <=300) {
+                result=50*1678+50*1734+100*2014+(kWh-200)*2536;
+            }
+            else if (kWh <= 400) {
+                result=50*1678+50*1734+100*2014+100*2536+(kWh-300)*2834;
+            }
+            else {
+                result=50*1678+50*1734+100*2014+100*2536+100*2834+(kWh-400)*2927;
+            }
+            document.querySelector('#gia').value=result;
+
+        }
+    </script>
+</body>
+</html>
