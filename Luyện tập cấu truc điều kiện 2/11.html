@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tính lãi ngân hàng</title>
+</head>
+<body>
+
+<h1>Tính lãi ngân hàng</h1>
+
+<form>
+	<label for="principal">Số tiền ban đầu:</label>
+	<input type="number" id="principal" name="principal"><br><br>
+
+	<label for="months">Số tháng cho vay:</label>
+	<input type="number" id="months" name="months"><br><br>
+
+	<label for="interestRate">Lãi suất hàng tháng:</label>
+	<input type="number" step="0.01" id="interestRate" name="interestRate"><br><br>
+
+	<input type="button" value="Tính toán" onclick="calculateInterest()">
+
+</form>
+
+<p id="result"></p>
+
+<script>
+	function calculateInterest() {
+		// Lấy giá trị từ các trường đầu vào
+		var principal = document.getElementById("principal").value;
+		var months = document.getElementById("months").value;
+		var interestRate = document.getElementById("interestRate").value;
+
+		// Chuyển lãi suất hàng tháng thành lãi suất hàng năm
+		var annualInterestRate = interestRate * 12;
+
+		// Tính toán lãi suất
+		var interest = principal * (annualInterestRate/100) * months;
+
+		// Hiển thị kết quả
+		document.getElementById("result").innerHTML = "Tổng lãi thu được: " + interest.toFixed(2) + " đồng";
+	}
+</script>
+
+</body>
+</html>

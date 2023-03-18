@@ -9,61 +9,59 @@
 </head>
 
 <body>
-    <form action="">
         <table>
             <tr>
                 <td>
-                    <input type="text" id="view">
-                </td>
-            </tr>
-            <div class="thang"></div>
-            <tr>
-                <td>
-                    <button type="button" name="btn" value="1" onclick="inputValue(this.value)">1</button>
-                    <button type="button" name="btn" value="2" onclick="inputValue(this.value)">2</button>
-                    <button type="button" name="btn" value="3" onclick="inputValue(this.value)">3</button>
-                    <button type="button" name="op" value="+" onclick="inputValue(this.value)">+</button>
+                    <input type="text" id="kq">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="button" name="btn" value="4" onclick="inputValue(this.value)">4</button>
-                    <button type="button" name="btn" value="5" onclick="inputValue(this.value)">5</button>
-                    <button type="button" name="btn" value="6" onclick="inputValue(this.value)">6</button>
-                    <button type="button" name="op" value="-" onclick="inputValue(this.value)">-</button>
+                    <button type="button" value="1" onclick="inputValue(this.value)">1</button>
+                    <button type="button"  value="2" onclick="inputValue(this.value)">2</button>
+                    <button type="button"  value="3" onclick="inputValue(this.value)">3</button>
+                    <button type="button"  value="+" onclick="inputValue(this.value)">+</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="button" name="btn" value="7" onclick="inputValue(this.value)">7</button>
-                    <button type="button" name="btn" value="8" onclick="inputValue(this.value)">8</button>
-                    <button type="button" name="btn" value="9" onclick="inputValue(this.value)">9</button>
-                    <button type="button" name="op" value="*" onclick="inputValue(this.value)">*</button>
+                    <button type="button"  value="4" onclick="inputValue(this.value)">4</button>
+                    <button type="button"  value="5" onclick="inputValue(this.value)">5</button>
+                    <button type="button"  value="6" onclick="inputValue(this.value)">6</button>
+                    <button type="button"  value="-" onclick="inputValue(this.value)">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value="7" onclick="inputValue(this.value)">7</button>
+                    <button type="button"  value="8" onclick="inputValue(this.value)">8</button>
+                    <button type="button" value="9" onclick="inputValue(this.value)">9</button>
+                    <button type="button"  value="*" onclick="inputValue(this.value)">*</button>
                 </td>
             </tr>
             <tr>
                 <td>
                     <button type="button" onclick="xoa()">C</button>
-                    <button type="button" name="btn" onclick="inputValue(this.value)">0</button>
-                    <button name="resukt" onclick="result()">=</button>
-                    <button type="button" name="op" value="/" onclick="inputValue(this.value)">/</button>
+                    <button type="button"  onclick="inputValue(this.value)">0</button>
+                    <button onclick="result()">=</button>
+                    <button type="button" value="/" onclick="inputValue(this.value)">/</button>
                 </td>
             </tr>
         </table>
-    </div>
-    </form>
-    <script>
-        let view = document.getElementById("view");
+    
+     <script>
+        let kq = document.getElementById("kq");
         function inputValue(value) {
-            view.value += value;
+            kq.value += value;
         }
         function result() {
-            let result = eval(view.value);
-            view.value = result;
+            let result = eval(kq.value);
+            kq.value = result;
         }
         function xoa() {
-            view.value = "";
+            kq.value = "";
         }
+        
     </script>
 </body>
 
