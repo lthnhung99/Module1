@@ -42,11 +42,7 @@
         let begin=+document.getElementById("begin").value;
         let month=+ocument.getElementById("month").value;
         let money=+document.getElementById("money").value;
-        let a=money *12;
-        let b=begin*(a/100)*month;
-        // let result;
-        // let result = begin+month+money;
-        //let result=(begin/month*12)+((begin*money)/(100*12));
+        let result=(begin/month*12)+((begin*money)/(100*12));
         document.getElementById("result").innerHTML = "Tổng lãi thu được:"+ b;
     }
    </script>
