@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 12</title>
 </head>
-<body>
-   <table>
-    <h1> <h1>Tính lãi ngân hàng</h1></h1>
-    <tbody>
-        <tr>
-            <td>Số tiền ban đầu</td>
-            <td>
-                <input ib="begin" type="number">
-            </td>
-        </tr>
-        <tr>
-            <td>Số tháng cho vay</td>
-            <td>
-                <input id="month" type="number">
-            </td>
-        </tr>
-        <tr>
-            <td>Lãi suất hàng tháng</td>
-            <td>
-                <input id="money" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button onclick="ketqua()" >Tính toán</button>
-            </td>
-        </tr>
-    </tbody>
-   </table>
-   <p id="result"></p>
 
-   <script>
-    function ketqua() {
-        let begin=+document.getElementById("begin").value;
-        let month=+ocument.getElementById("month").value;
-        let money=+document.getElementById("money").value;
-        let result=(begin/month*12)+((begin*money)/(100*12));
-        document.getElementById("result").innerHTML = "Tổng lãi thu được:"+ b;
-    }
-   </script>
+<body>
+    <table>
+        <h1>
+            <h1>Tính lãi ngân hàng</h1>
+        </h1>
+        <tbody>
+            <tr>
+                <td>Số tiền ban đầu</td>
+                <td>
+                    <input id="begin" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Số tháng cho vay</td>
+                <td>
+                    <input id="month" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Lãi suất hàng tháng</td>
+                <td>
+                    <input id="money" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ketqua()" >Tính toán</button>
+                    
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <p id="result"></p>
+    <script>
+
+        function ketqua() {
+            let begin = parseInt(document.getElementById("begin").value);
+            let month = parseInt(document.getElementById("month").value);
+            let money = parseFloat(document.getElementById("money").value);
+            
+           // Chuyển lãi suất hàng tháng thành lãi suất hàng năm
+           let a = money *12;
+           // Tính toán lãi suất
+          let result=begin*(a/100)*month;
+            document.getElementById("result").innerHTML = "Tổng lãi thu được: " + result + "đồng";
+        }
+    </script>
 
 </body>
+
 </html>
